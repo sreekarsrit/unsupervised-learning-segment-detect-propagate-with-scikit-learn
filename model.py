@@ -17,8 +17,13 @@ def blobs_data(random_state=42):
     X,y=make_blobs(n_samples=2000,centers=centers, cluster_std=cluster_std,random_state=random_state)
     return (X,y)
 
-# Step 2 - fit_kmeans (not yet solved)
-# TODO: implement
+# Step 2 - fit_kmeans
+from sklearn.cluster import KMeans
+def fit_kmeans(X, k, random_state=42):
+    # TODO: KMeans(n_clusters=k, n_init=10, random_state=random_state).fit(X)
+    km=KMeans(n_clusters=k, n_init=10, random_state=random_state).fit(X)
+    
+    return km
 
 # Step 3 - inertia_curve (not yet solved)
 # TODO: implement
